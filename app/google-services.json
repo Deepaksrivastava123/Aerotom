@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1047760139526",
+    "project_id": "areotom-4bab0",
+    "storage_bucket": "areotom-4bab0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047760139526:android:c80846a1691f0c10a61a87",
+        "android_client_info": {
+          "package_name": "com.aerotom.aerotom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1047760139526-arkkuvbimm8iv78c89mkk8mujc3q510l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRbNdOWVsm_Ik6LBAc_ipSOLM1TH_12dM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1047760139526-arkkuvbimm8iv78c89mkk8mujc3q510l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

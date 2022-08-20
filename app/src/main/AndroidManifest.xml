@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aerotom.aerotom">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.aerotom.aerotom.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TownClap"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.aerotom.aerotom.activity.ExportActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.aerotom.aerotom.activity.HearExportListActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.aerotom.aerotom.activity.HearCategotyActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.aerotom.aerotom.activity.HearActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Intro" />
+        <activity android:name="com.aerotom.aerotom.activity.SearchActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.BookingDetailActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.ResedulActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.BookingActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.NotificationActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.ReferlActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.WalletActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.TimeSlotActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.CartActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.BasicActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.AddOnsActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.ItemListActivity" />
+        <activity
+            android:name="com.aerotom.aerotom.activity.SubCategoryActivity"
+            android:theme="@style/Theme.Intro" />
+        <activity android:name="com.aerotom.aerotom.activity.SubCategoyTypeActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.ServiceAllActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.DynamicAllActivity" />
+        <activity
+            android:name="com.aerotom.aerotom.activity.SearchLocationActivity"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.aerotom.aerotom.activity.LoginActivity"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.aerotom.aerotom.activity.HomeActivity"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.aerotom.aerotom.activity.VerifyPhoneActivity"
+            android:theme="@style/Theme.Intro" />
+        <activity android:name="com.aerotom.aerotom.activity.FlutterwaveActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.SenangpayActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.PaystackActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.PaytmActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.AddressActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.RazerpayActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.StripPaymentActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.PaypalActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.SettingActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.PrivecyPolicyActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.AboutsActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.TramsAndConditionActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.ContectusActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.EditProfileActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.ForgotActivity" />
+        <activity android:name="com.aerotom.aerotom.activity.ChanegPasswordActivity" />
+        <activity
+            android:name="com.aerotom.aerotom.activity.IntroActivity"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.aerotom.aerotom.locationpick.LocationGetActivity"
+            android:theme="@style/Theme.Intro" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+
+        <activity
+            android:name="com.aerotom.aerotom.activity.FirstActivity"
+            android:theme="@style/Theme.Intro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.aerotom.aerotom.MainActivity" />
+    </application>
+
+</manifest>
