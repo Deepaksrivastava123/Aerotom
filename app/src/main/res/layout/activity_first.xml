@@ -9,8 +9,8 @@
     tools:context=".activity.FirstActivity">
 
     <ImageView
-        android:layout_width="150dp"
-        android:src="@drawable/logo"
+        android:layout_width="400dp"
+        android:src="@drawable/applogo"
 
-        android:layout_height="150dp"/>
+        android:layout_height="600dp"/>
 </LinearLayout>

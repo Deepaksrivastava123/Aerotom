@@ -77,8 +77,8 @@ public class LoginActivity extends AppCompatActivity implements GetResult.MyList
     EditText edRefercode;
     @BindView(R.id.txt_register)
     TextView txtRegister;
-    @BindView(R.id.at_code)
-    AutoCompleteTextView atCode;
+//    @BindView(R.id.at_code)
+//    AutoCompleteTextView atCode;
     CustPrograssbar custPrograssbar;
     SessionManager sessionManager;
 
@@ -92,23 +92,23 @@ public class LoginActivity extends AppCompatActivity implements GetResult.MyList
         requestPermissions(new String[]{Manifest.permission.CALL_PHONE, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         custPrograssbar = new CustPrograssbar();
         sessionManager = new SessionManager(LoginActivity.this);
-        atCode.setOnFocusChangeListener((view, b) -> {
-            if (!b) {
-                // on focus off
-                String str = atCode.getText().toString();
-
-                ListAdapter listAdapter = atCode.getAdapter();
-                for (int i = 0; i < listAdapter.getCount(); i++) {
-                    String temp = listAdapter.getItem(i).toString();
-                    if (str.compareTo(temp) == 0) {
-                        return;
-                    }
-                }
-
-                atCode.setText("");
-
-            }
-        });
+//        atCode.setOnFocusChangeListener((view, b) -> {
+//            if (!b) {
+//                // on focus off
+//                String str = atCode.getText().toString();
+//
+//                ListAdapter listAdapter = atCode.getAdapter();
+//                for (int i = 0; i < listAdapter.getCount(); i++) {
+//                    String temp = listAdapter.getItem(i).toString();
+//                    if (str.compareTo(temp) == 0) {
+//                        return;
+//                    }
+//                }
+//
+//                atCode.setText("");
+//
+//            }
+//        });
         getCodelist();
     }
 
@@ -151,7 +151,7 @@ public class LoginActivity extends AppCompatActivity implements GetResult.MyList
 
 
             jsonObject.put("mobile", edMobile.getText().toString());
-            jsonObject.put("ccode", atCode.getText().toString());
+            jsonObject.put("ccode", "+91");
             RequestBody bodyRequest = RequestBody.create(MediaType.parse("application/json"), jsonObject.toString());
             Call<JsonObject> call = APIClient.getInterface().getMobileCheck(bodyRequest);
 //            Call<JsonObject> call = APIClient.getInterface().createUser(bodyRequest);
@@ -233,8 +233,8 @@ public class LoginActivity extends AppCompatActivity implements GetResult.MyList
                 }
                 ArrayAdapter<String> adapter = new ArrayAdapter<>
                         (this, android.R.layout.simple_list_item_1, countries);
-                atCode.setAdapter(adapter);
-                atCode.setThreshold(1);
+               // atCode.setAdapter(adapter);
+              //  atCode.setThreshold(1);
             }else if (callNo.equalsIgnoreCase("3")) {
                 Gson gson = new Gson();
                 ResponseMessge response = gson.fromJson(result.toString(), ResponseMessge.class);
@@ -243,7 +243,7 @@ public class LoginActivity extends AppCompatActivity implements GetResult.MyList
                     User user = new User();
                     user.setName(edName.getText().toString());
                     user.setEmail(edEmailnew.getText().toString());
-                    user.setCcode(atCode.getText().toString());
+                    user.setCcode("+91");
                     user.setMobile(edMobile.getText().toString());
                     user.setPassword(edPassswordnew.getText().toString());
                     user.setRefercode(edRefercode.getText().toString());

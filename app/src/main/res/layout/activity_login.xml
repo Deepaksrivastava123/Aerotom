@@ -248,35 +248,35 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:orientation="vertical">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="3"-->
+<!--                        android:orientation="vertical">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/code"
-                            android:textColor="@color/black" />
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/code"-->
+<!--                            android:textColor="@color/black" />-->
 
-                        <AutoCompleteTextView
-                            android:id="@+id/at_code"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:background="@drawable/border"
-                            android:ems="10"
-                            android:hint=""
-                            android:padding="10dp">
+<!--                        <AutoCompleteTextView-->
+<!--                            android:id="@+id/at_code"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/border"-->
+<!--                            android:ems="10"-->
+<!--                            android:hint=""-->
+<!--                            android:padding="10dp">-->
 
 
-                        </AutoCompleteTextView>
-                    </LinearLayout>
+<!--                        </AutoCompleteTextView>-->
+<!--                    </LinearLayout>-->
 
-                    <View
-                        android:layout_width="15dp"
-                        android:layout_height="1dp" />
+<!--                    <View-->
+<!--                        android:layout_width="15dp"-->
+<!--                        android:layout_height="1dp" />-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
