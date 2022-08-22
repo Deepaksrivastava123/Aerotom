@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1047760139526-h75f8ekjfegffpricg7fdkt1j6j6jmit.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aerotom.aerotom",
+            "certificate_hash": "3174d85591567c65090af87245af87a6ec1e8bfd"
+          }
+        },
+        {
           "client_id": "1047760139526-arkkuvbimm8iv78c89mkk8mujc3q510l.apps.googleusercontent.com",
           "client_type": 3
         }

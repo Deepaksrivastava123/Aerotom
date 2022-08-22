@@ -3,6 +3,7 @@ package com.aerotom.aerotom.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import com.aerotom.aerotom.model.User;
 import com.google.gson.Gson;
@@ -80,7 +81,16 @@ public class SessionManager {
     }
 
     public User getUserDetails(String key) {
-        return new Gson().fromJson(mPrefs.getString(user, key), User.class);
+        String jsonString = mPrefs.getString("","");
+        if (jsonString.isEmpty()) {
+            return null;
+        }else {
+            return new Gson().fromJson(jsonString,User.class);
+        }
+
+
+//        return new Gson().fromJson(mPrefs.getString(user, key), User.class);
+//        return new Gson().fromJson(mPrefs.getString(key), User.class);
     }
 
     public void logoutUser() {

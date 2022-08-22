@@ -154,7 +154,6 @@ public class LoginActivity extends AppCompatActivity implements GetResult.MyList
             jsonObject.put("ccode", "+91");
             RequestBody bodyRequest = RequestBody.create(MediaType.parse("application/json"), jsonObject.toString());
             Call<JsonObject> call = APIClient.getInterface().getMobileCheck(bodyRequest);
-//            Call<JsonObject> call = APIClient.getInterface().createUser(bodyRequest);
             GetResult getResult = new GetResult();
             getResult.setMyListener(this);
             getResult.callForLogin(call, "3");
