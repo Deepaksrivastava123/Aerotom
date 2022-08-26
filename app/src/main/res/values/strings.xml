@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UClap</string>
+    <string name="app_name">Aerotom</string>
     <string name="api_key">*******************************************</string>
     <string name="next">Next</string>
     <string name="introtext">Service at your doorstep. </string>
