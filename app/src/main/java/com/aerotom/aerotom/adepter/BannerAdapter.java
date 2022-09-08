@@ -46,7 +46,7 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerHold
     @Override
     public void onBindViewHolder(@NonNull BannerHolder holder, int position) {
         Banner banner=mBanner.get(position);
-        Glide.with(context).load(APIClient.baseUrl + "/" + mBanner.get(position).getImg()).thumbnail(Glide.with(context).load(R.drawable.ezgifresize)).centerCrop().into(holder.imgBanner);
+        Glide.with(context).load("https://uclap.athervnet.in/" + mBanner.get(position).getImg()).thumbnail(Glide.with(context).load(R.drawable.ezgifresize)).centerCrop().into(holder.imgBanner);
         holder.imgBanner.setOnClickListener(v -> listener.onClickBannerItem(banner));
     }
 

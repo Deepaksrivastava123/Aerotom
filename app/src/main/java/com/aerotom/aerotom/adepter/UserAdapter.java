@@ -59,7 +59,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder> 
         TestimonialItem testimonial = mTestimonial.get(position);
         holder.txtName.setText(testimonial.getTitle());
         holder.txtDesignetion.setText(testimonial.getComment());
-        Glide.with(mContext).load(APIClient.baseUrl + "/" + testimonial.getImg()).into(holder.thumbnail);
+        Glide.with(mContext).load("https://uclap.athervnet.in/" + testimonial.getImg()).into(holder.thumbnail);
 
     }
 

@@ -64,7 +64,7 @@ public class AddonsAdapter extends RecyclerView.Adapter<AddonsAdapter.MyViewHold
 
 
         final AddOnDataItem model = mCatlist.get(position);
-        Glide.with(mContext).load(APIClient.baseUrl + "/" + model.getImg()).into(holder.thumbnail);
+        Glide.with(mContext).load("https://uclap.athervnet.in/" + model.getImg()).into(holder.thumbnail);
         holder.title.setText(model.getTitle()+"");
         holder.lvlclick.setOnClickListener(v -> {
             model.setSelected(!model.isSelected());

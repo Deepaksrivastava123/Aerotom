@@ -60,7 +60,8 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
 
         ChildcatItem item = childlist.get(position);
         holder.title.setText("" + item.getTitle());
-        Glide.with(mContext).load(APIClient.baseUrl + "/" + item.getImg()).thumbnail(Glide.with(mContext).load(R.drawable.ezgifresize)).centerCrop().into(holder.thumbnail);
+        //Glide.with(mContext).load(APIClient.baseUrl + "/" + item.getImg()).thumbnail(Glide.with(mContext).load(R.drawable.ezgifresize)).centerCrop().into(holder.thumbnail);
+        Glide.with(mContext).load("https://uclap.athervnet.in/" + item.getImg()).thumbnail(Glide.with(mContext).load(R.drawable.ezgifresize)).centerCrop().into(holder.thumbnail);
         holder.lvlclick.setOnClickListener(v -> {
             listener.onClickSubCategoryItem(item, position);
         });

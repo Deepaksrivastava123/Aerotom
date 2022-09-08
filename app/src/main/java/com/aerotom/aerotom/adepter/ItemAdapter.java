@@ -186,7 +186,8 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 holder1.txtPrice.setText(sessionManager.getStringData(SessionManager.currency) + new DecimalFormat("##.##").format(pp));
 
                 holder1.txtTime.setText("" + item.getServiceTtken() + "M");
-                Glide.with(mContext).load(APIClient.baseUrl + "/" + item.getServiceImg().get(0)).centerCrop().into(holder1.imgIcon);
+               // Glide.with(mContext).load(APIClient.baseUrl + "/" + item.getServiceImg().get(0)).centerCrop().into(holder1.imgIcon);
+                Glide.with(mContext).load("https://uclap.athervnet.in/" + item.getServiceImg().get(0)).centerCrop().into(holder1.imgIcon);
                 holder1.lvlclick.setOnClickListener(v -> listener.onClickItem("category.getCatname()", position));
                 holder1.txtDetails.setText("" +Html.fromHtml(item.getServiceSdesc()));
 
@@ -344,7 +345,7 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             LayoutInflater inflater = LayoutInflater.from(mContext);
             View view = inflater.inflate(R.layout.images, null);
             ImageView itemTitle = view.findViewById(R.id.itemimage);
-            Glide.with(mContext).load(APIClient.baseUrl + "/" + images.get(i)).into(itemTitle);
+            Glide.with(mContext).load("https://uclap.athervnet.in/" + images.get(i)).into(itemTitle);
 
             lnrView.addView(view);
         }

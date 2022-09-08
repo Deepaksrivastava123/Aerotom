@@ -68,7 +68,7 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.MyViewHo
         SubcatDatum category = mCatlist.get(position);
         holder.title.setText(category.getTitle() + "");
         holder.txtSubtitle.setText("" + category.getSubtitle());
-        Picasso.get().load(APIClient.baseUrl + "/" + category.getImg()).into(holder.imgItem);
+        Picasso.get().load("https://uclap.athervnet.in/"+ category.getImg()).into(holder.imgItem);
 
         holder.lvlclick.setOnClickListener(v -> {
 

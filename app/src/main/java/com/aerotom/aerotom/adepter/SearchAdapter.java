@@ -63,7 +63,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
 
         SearchChildcatdataItem category = mCatlist.get(position);
         holder.title.setText(category.getTitle() + "");
-        Picasso.get().load(APIClient.baseUrl + "/" + category.getImg()).into(holder.imgItem);
+        Picasso.get().load("https://uclap.athervnet.in/" + category.getImg()).into(holder.imgItem);
 
         holder.lvlclick.setOnClickListener(v -> {
 

@@ -1,6 +1,7 @@
 package com.aerotom.aerotom.adepter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,7 +75,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
         CatlistItem category = mCatlist.get(position);
         holder.title.setText(category.getCatName() + "");
-        Glide.with(mContext).load(APIClient.baseUrl + "/" + category.getCatImg()).into(holder.thumbnail);
+        Glide.with(mContext).load("https://uclap.athervnet.in/" + category.getCatImg()).into(holder.thumbnail);
+        //Log.d("imag_url",APIClient.baseUrl  + category.getCatImg());
+
         holder.lvlclick.setOnClickListener(v -> {
             listener.onClickCategoryItem(category, position);
         });
