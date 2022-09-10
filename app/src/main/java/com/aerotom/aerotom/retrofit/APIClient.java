@@ -9,7 +9,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class APIClient {
     static Retrofit retrofit = null;
     public static final String baseUrl = "http://athervnet.in/uclap/tcapi/";
-    
+
+
     public static final String APPEND_URL = "//tcapi/";
 
     public static UserService getInterface() {

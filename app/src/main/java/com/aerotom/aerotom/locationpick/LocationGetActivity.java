@@ -268,6 +268,17 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
         mMap = googleMap;
         mMap.clear();
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMapToolbarEnabled(false);
         if (mMap.isIndoorEnabled()) {
             mMap.setIndoorEnabled(false);
@@ -355,6 +366,7 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
                 // for ActivityCompat#requestPermissions for more details.
                 return;
             }
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(28.750505933478173, 77.0320598101672),9.0f));
             fusedLocationProviderClient.getLastLocation().addOnSuccessListener(this, location -> {
                 if (location != null) {
                     mMap.clear();
@@ -607,7 +619,7 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
                 if (isZooming) {
                     cameraUpdate = CameraUpdateFactory.newLatLngZoom(coordinate, mMap.getCameraPosition().zoom);
                 } else {
-                    cameraUpdate = CameraUpdateFactory.newLatLngZoom(coordinate, 18);
+                    cameraUpdate = CameraUpdateFactory.newLatLngZoom(coordinate, 18.0f);
                 }
 
                 mMap.animateCamera(cameraUpdate);
